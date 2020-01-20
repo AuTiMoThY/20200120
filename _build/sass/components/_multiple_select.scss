@@ -1,0 +1,155 @@
+.ms-parent {
+	position: relative;
+	@include padding(x, 0.6rem);
+	padding-top: 36px;
+	// height: 36px;
+
+	&.form-control {
+		padding: 0;
+	}
+}
+
+.ms-choice {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	// @include absolute(0, $L:0);
+	background-color: transparent;
+	border: none;
+	@include wh(100%, 36);
+	padding: $input-padding-y $input-padding-x;
+	margin-left: -0.6rem;
+	margin-right: -0.6rem;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	color: #595757;
+
+	// > span {
+	// 	@include ellipsis;
+	// }
+}
+
+.ms-drop {
+	display: none;
+	// @include absolute(0, $L:0);
+	z-index: 10;
+	@include wh;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	border-radius: 5px;
+	background-color: $grey-lighten-5;
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+		overflow-y: auto;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+		// box-shadow: $z-depth-1;
+		// border-radius: 5px;
+
+	}
+
+	li {
+		&:not(:first-of-type) {
+			border-top: 1px solid $grey-lighten-2;
+		}
+		&:hover {
+			background-color: #eee;
+		}
+
+		&.selected {
+			// display: none;
+			background-color: theme-color('primary-light-1');
+			color: #fff;
+		}
+	}
+
+
+
+	label {
+		display: block;
+		margin-bottom: 0;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+
+		input {
+			display: none;
+		}
+	}
+
+
+	.not-show {
+		display: none;
+	}
+
+	.c-pic {
+		display: inline-block;
+		vertical-align: middle;
+		@include wh(30);
+		margin-right: 0.6rem;
+	}
+}
+
+.ms-search {
+	@include wh;
+
+	@include padding(x, 1rem);
+	padding-top: 0.5em;
+	padding-bottom: 0.5rem;
+
+	input {
+		@include wh;
+		box-shadow: $z-depth-1;
+		border: none;
+		padding: $input-padding-y $input-padding-x;
+		border-radius: 5px;
+	}
+}
+
+
+
+
+.ms-no-results {
+	padding: 1em;
+}
+
+
+.ms_select {
+	.c-name {
+		position: relative;
+
+		&:before {
+			@include psudoClass;
+			@include wh(25);
+			border-radius: 5px;
+			border: 1px solid #ccc;
+
+			display: inline-block;
+			vertical-align: -0.8ex;
+			margin-right: 0.6rem;
+		}
+
+		&:after {
+			@include psudoClass;
+			@include absolute(5px, $L:4px);
+			@include wh(17px, 10px);
+			border-bottom: 3px solid theme-color('primary');
+			border-left: 3px solid theme-color('primary');
+			transform: rotate(-45deg) scale(0);
+
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	.selected {
+		.c-name {
+			&:before {
+				background-color: #fff;
+			}
+			&:after {
+				transform: rotate(-45deg) scale(1);
+			}
+
+		}
+	}
+}

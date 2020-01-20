@@ -1,0 +1,58 @@
+.aubtn {
+	display: block;
+	border: none;
+	background-color: transparent;
+	padding: 0.6rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: $z-depth-1;
+
+
+	&-submit {
+		@include linear-gradient(to top right, #329D9C  , #7BE495 );
+		// @include linear-gradient(to top right, darken(#00FFA1, 10)  , darken(#00FFFF, 10) );
+		color: lighten(#00FFA1, 50);
+	}
+
+
+	&-nextstage, &-prevstage {
+		@include absolute();
+		box-shadow: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	&-prevstage {
+		left: 1rem;
+	}
+
+	&-nextstage {
+		right: 1rem;
+	}
+
+	&-link {
+		@include linear-gradient(to top right, theme-color('primary-dark'), theme-color('primary') );
+		// color: darken(#a6c1ee, 40);
+		color: #fff;
+
+		&:hover {
+			@include linear-gradient(to top right, lighten(theme-color('primary-dark'), 10), lighten(theme-color('primary'), 10) );
+			color: #fff;
+		}
+	}
+
+	&-smlink {
+		display: table;
+		padding: 0.4rem 0.6rem;
+		font-size: 0.85rem;
+		@include linear-gradient(to top right, theme-color('primary-dark'), theme-color('primary') );
+		// color: darken(#a6c1ee, 40);
+		color: #fff;
+
+		&:hover {
+			@include linear-gradient(to top right, lighten(theme-color('primary-dark'), 10), lighten(theme-color('primary'), 10) );
+			color: #fff;
+		}
+	}
+
+
+}

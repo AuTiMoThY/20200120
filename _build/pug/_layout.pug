@@ -1,0 +1,76 @@
+doctype html
+html(class="no-js" lang="zh")
+	- var current_active = "";
+	- var version = "";
+	- var login = '';
+	block vars
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		block title
+			title #{page_title}|案件中心
+		meta(name="keywords", content="")
+		meta(name="description", content="")
+		meta(name="robots", content="index,follow")
+		meta(name="viewport", content="width=device-width, user-scalable=no")
+
+		// 讓手機部判斷它是電話號碼變顏色
+		meta(name="format-detection", content="telephone=no")
+
+		//- // reset
+		//- link(rel="stylesheet", href="dist/css/reset.css")
+
+		// Font Awesome
+		link(rel="stylesheet", href="dist/fontawesome/css/fa-svg-with-js.css")
+		script(src="dist/fontawesome/js/fontawesome-all.js")
+
+		block pluginStyle
+		//- link(rel="stylesheet", href="dist/plugin/fancybox/jquery.fancybox.min.css")
+
+		//- // style
+		//- <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+
+		link(rel="stylesheet", href="dist/css/style.css")
+
+		// js
+		script(src="dist/js/libs/modernizr-custom.min.js")
+		script(src="dist/js/ModernizrAu.js")
+
+	body
+		//- // =========================================================================
+		//- // SVG sprites  START
+		//- .symbols_svg.d-none
+		//- 	include ../symbol/svg/sprite.symbol.svg
+		//- // SVG sprites  END  !!
+		//- // =========================================================================
+		//- #top
+		//- #goTop.btn-go_top.d-none
+		//- 	a(href="#top")
+		//- 		i.fas.fa-arrow-up
+		.body_wrap(class=page_class)
+			//- include _aside.pug
+			//- include _header.pug
+			.page_wrap
+				// =========================================================================
+				// 頁面內容  START
+				// =========================================================================
+				block content
+				// =========================================================================
+				// 頁面內容  END  !!
+				// =========================================================================
+			//- include footer.pug
+
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script window.jQuery || document.write('<script src="dist/js/libs/jquery.min.js"><\/script>')
+		//-
+
+		script(src="dist/js/libs/plugin_mix.js")
+		script(src="dist/plugin/autosize.min.js")
+		script(src="dist/plugin/multiple-select.js")
+		//- script(src="dist/plugin/fancybox/jquery.fancybox.min.js")
+
+		// 動態效果
+		//- script(src="dist/plugin/greensock/TweenMax.min.js")
+
+		script(src="dist/js/script.js")
+		block page_script
