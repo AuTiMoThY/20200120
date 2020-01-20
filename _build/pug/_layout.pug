@@ -8,7 +8,7 @@ html(class="no-js" lang="zh")
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		block title
-			title #{page_title}|案件中心
+			title #{page_title}
 		meta(name="keywords", content="")
 		meta(name="description", content="")
 		meta(name="robots", content="index,follow")
@@ -20,9 +20,9 @@ html(class="no-js" lang="zh")
 		//- // reset
 		//- link(rel="stylesheet", href="dist/css/reset.css")
 
-		// Font Awesome
-		link(rel="stylesheet", href="dist/fontawesome/css/fa-svg-with-js.css")
-		script(src="dist/fontawesome/js/fontawesome-all.js")
+		//- // Font Awesome
+		//- link(rel="stylesheet", href="dist/fontawesome/css/fa-svg-with-js.css")
+		//- script(src="dist/fontawesome/js/fontawesome-all.js")
 
 		block pluginStyle
 		//- link(rel="stylesheet", href="dist/plugin/fancybox/jquery.fancybox.min.css")
@@ -49,7 +49,7 @@ html(class="no-js" lang="zh")
 		//- 		i.fas.fa-arrow-up
 		.body_wrap(class=page_class)
 			//- include _aside.pug
-			//- include _header.pug
+			include _header.pug
 			.page_wrap
 				// =========================================================================
 				// 頁面內容  START
@@ -58,19 +58,19 @@ html(class="no-js" lang="zh")
 				// =========================================================================
 				// 頁面內容  END  !!
 				// =========================================================================
-			//- include footer.pug
+			include _footer.pug
 
 		script(src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
 		script window.jQuery || document.write('<script src="dist/js/libs/jquery.min.js"><\/script>')
 		//-
 
 		script(src="dist/js/libs/plugin_mix.js")
-		script(src="dist/plugin/autosize.min.js")
-		script(src="dist/plugin/multiple-select.js")
-		//- script(src="dist/plugin/fancybox/jquery.fancybox.min.js")
 
 		// 動態效果
-		//- script(src="dist/plugin/greensock/TweenMax.min.js")
-
+		script(src="dist/plugin/greensock/TweenMax.min.js")
+		script(src="dist/plugin/scrollmagic/ScrollMagic.min.js")
+		script(src="dist/plugin/scrollmagic/plugins/jquery.ScrollMagic.min.js")
+		script(src="dist/plugin/scrollmagic/plugins/animation.gsap.min.js")
+		script(src="dist/plugin/scrollmagic/plugins/debug.addIndicators.min.js")
 		script(src="dist/js/script.js")
 		block page_script

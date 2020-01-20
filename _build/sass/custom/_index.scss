@@ -1,0 +1,45 @@
+.service_wrap {
+	padding-top: 160px;
+}
+
+.service_block {
+	display: table;
+	margin: auto;
+	ul {
+		display: flex;
+	}
+}
+
+.service_item {
+	width: 170px;
+	opacity: 0;
+
+	&:not(:first-of-type) {
+		margin-left: 130px;
+	}
+
+	.title {
+		margin-bottom: 1.2rem;
+		@include remCalc(font-size, 22);
+		font-weight: bolder;
+		line-height: 32px;
+	}
+
+	.txt {
+		line-height: 28px;
+	}
+}
+
+.info_wrap {
+	padding-top: 160px;
+}
+
+
+.case_wrap {
+	padding-top: 160px;
+	padding-bottom: 160px;
+}
+
+.case_item {
+
+}

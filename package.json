@@ -26,7 +26,8 @@
     "gulp-svg-sprite": "^1.5.0",
     "jquery": "^3.4.1",
     "jquery-cropper": "^1.0.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "scrollmagic": "^2.0.7"
   },
   "devDependencies": {
     "browser-sync": "^2.26.5",

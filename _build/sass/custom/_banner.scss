@@ -1,0 +1,33 @@
+.banner_wrap {
+	position: relative;
+	overflow: hidden;
+
+	.pic {
+		@include rwdBlock(1920, 600);
+	}
+	.slogan1 {
+		@include absolute(percentage(184 / 600), $L:percentage(1175 / 1920));
+		@include remCalc(font-size, 28);
+		color: #000;
+		font-weight: bolder;
+		opacity: 0;
+
+		transition: all 0.3s $easeInOutCubic3;
+
+	}
+	.slogan2 {
+		@include absolute(percentage(256 / 600), $L:percentage(1175 / 1920));
+		@include remCalc(font-size, 62);
+		color: #000;
+		font-weight: bolder;
+		opacity: 0;
+		transition: all 0.3s $easeInOutCubic3;
+	}
+	.slogan3 {
+		@include absolute(percentage(368 / 600), $L:percentage(1175 / 1920));
+		@include remCalc(font-size, 16);
+		color: #000;
+		opacity: 0;
+		transition: all 0.3s $easeInOutCubic3;
+	}
+}

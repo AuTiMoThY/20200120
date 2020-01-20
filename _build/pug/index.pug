@@ -1,0 +1,78 @@
+extends _layout.pug
+block vars
+	//- - var login = 1;
+	- var page_class = "index_page";
+	- var page_title = "首頁";
+	- var header_title = "首頁";
+
+
+block content
+	main.page_main
+		section#bannerWrap.banner_wrap
+			.pic
+				img(src="dist/img/image-banner.jpg", alt="")
+			.slogan1 從眾多品牌中
+			.slogan2 脫穎而出
+			.slogan3 你想要得到的任何網站需求，<br>樂活資訊為您呈現！
+		section#serviceWrap.service_wrap
+			.container
+				.service_block
+					ul.cf.lis-n
+						li.service_item
+							h2.title 顧問諮詢
+							p.txt 協助客戶歸納需求、企劃架構流程及視覺風格擬定方向
+						li.service_item
+							h2.title 系統開發
+							p.txt 基本形象或購物功能外，可製作其他網站功能及串接需求資料
+						li.service_item
+							h2.title 視覺設計
+							p.txt 依客戶需求及產業特質等量身訂做專屬設計風格
+		section.info_wrap
+			.container
+				article.info_block.row
+					.col-12.col-sm-6
+						h2.title 視覺設計
+						.info_content
+							p 樂活多媒體有限公司坐落於台北，是一支極具創新力的青創團隊。
+							p 著眼於網頁設計規劃，從專業的網路行銷角度替客戶量身打造注重質感的品牌識別，在虛擬世界中尋找人性化溝通的更多可能性。
+							p 以人為本的角度思考，我們注重使用者體驗，從功能規劃到使用動線，盡可能滿足使用者的操作方式，因為我們深信好的網站必須能傳遞情感。
+					.col-12.col-sm-6
+						.info_pic.pic
+							img(src="dist/img/image-960_670.jpg", alt="")
+		section.case_wrap
+			.container
+				.case_block
+					ul.cf.lis-n.row
+						li.case_item.col-3
+							.case_item-pic
+								.pic
+									img(src="dist/img/image-01.png", alt="視覺設計")
+							.case_item-title 視覺設計
+							.case_item-cnt
+								p.txt 著眼於網頁設計規劃，從專業的網路行銷角度替客戶量身打造注重質感的品牌識別，在虛擬世界中尋找人性化溝通的更多可能性。
+						li.case_item.col-3
+							.case_item-pic
+								.pic
+									img(src="dist/img/image-02.png", alt="視覺設計")
+							.case_item-title 視覺設計
+							.case_item-cnt
+								p.txt 著眼於網頁設計規劃，從專業的網路行銷角度替客戶量身打造注重質感的品牌識別，在虛擬世界中尋找人性化溝通的更多可能性。
+						li.case_item.col-3
+							.case_item-pic
+								.pic
+									img(src="dist/img/image-03.png", alt="視覺設計")
+							.case_item-title 視覺設計
+							.case_item-cnt
+								p.txt 著眼於網頁設計規劃，從專業的網路行銷角度替客戶量身打造注重質感的品牌識別，在虛擬世界中尋找人性化溝通的更多可能性。
+						li.case_item.col-3
+							.case_item-pic
+								.pic
+									img(src="dist/img/image-04.png", alt="視覺設計")
+							.case_item-title 視覺設計
+							.case_item-cnt
+								p.txt 著眼於網頁設計規劃，從專業的網路行銷角度替客戶量身打造注重質感的品牌識別，在虛擬世界中尋找人性化溝通的更多可能性。
+
+
+
+
+block page_script

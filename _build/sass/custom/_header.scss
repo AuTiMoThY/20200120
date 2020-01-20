@@ -1,0 +1,39 @@
+.header_nav {
+	@include absolute(0, $R:1rem);
+	height: 100%;
+
+	ul {
+		height: 100%;
+	}
+
+	&-item {
+		position: relative;
+		float: left;
+		width: 120px;
+		height: 100px;
+
+		.inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			color: #000;
+		}
+
+		&:after {
+			@include psudoClass;
+			@include absolute($B:0);
+			@include wh(100%, 0px);
+			background-color: #aacf52;
+			transition: all 0.3s $easeInOutCubic3;
+		}
+
+		&:hover, &.active {
+			&:after {
+				height: 3px;
+			}
+		}
+	}
+}
